@@ -1,0 +1,33 @@
+{
+    "name": "soszin/laravel-authentik",
+    "description": "Integrate laravel application with Authentik",
+    "version": "1.0.0",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Soszin\\LaravelAuthentik\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dawid Sroczynski"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^10.10",
+        "socialiteproviders/authentik": "^5.2"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Soszin\\LaravelAuthentik\\LaravelAuthentikServiceProvider"
+            ],
+            "aliases": {
+                "Authentik": "Soszin\\LaravelAuthentik\\Facades\\Authentik"
+            }
+        }
+    }
+}
