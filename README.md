@@ -116,9 +116,7 @@ readonly class CreateUserFromAuthentikListener {
 ```php
 // app/Providers/EventServiceProvider.php
 protected $listen = [
-    Registered::class => [
-        SendEmailVerificationNotification::class,
-    ],
+    ...
     UserAuthenitcated::class => [
         CreateUserFromAuthentikListener::class
     ]
